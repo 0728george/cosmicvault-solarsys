@@ -1,0 +1,41 @@
+cosmicvault/
+├── public/                          # Static assets served directly
+│   ├── favicon.svg                  # Site icon
+│   ├── textures/                    # Your local high-res textures (offline-ready)
+│   │   ├── 2k_sun.jpg
+│   │   ├── 8k_earth_daymap.jpg
+│   │   ├── 8k_earth_clouds.jpg
+│   │   ├── 8k_moon.jpg
+│   │   ├── 8k_jupiter.jpg
+│   │   ├── 8k_saturn.jpg
+│   │   ├── 2k_saturn_ring_alpha.png
+│   │   └── ... (all other planet/moon textures)
+│   └── modules/                     # Optional: Full standalone HTML modules (for iframe fallback)
+│       └── solar-system.html        # Your full solar system (if keeping iframe version)
+│
+├── src/
+│   ├── components/                  # Reusable Astro/JS components (islands)
+│   │   ├── Header.astro
+│   │   ├── Footer.astro
+│   │   ├── SolarSystem.astro        # Your Three.js solar system as Astro island
+│   │   ├── GalacticExoplanets.astro # Future exoplanet viewer component
+│   │   └── CardGrid.astro           # For Physics Lab cards
+│   │
+│   ├── layouts/                     # Page layouts
+│   │   └── MainLayout.astro         # Main wrapper with header/footer
+│   │
+│   ├── pages/                       # All site pages
+│   │   ├── index.astro              # Home page (Solar System)
+│   │   ├── exoplanets.astro         # Galactic exoplanets page
+│   │   ├── physics-lab.astro        # Physics Lab hub
+│   │   ├── periodic-table.astro     # Periodic table page
+│   │   └── about.astro              # About / credits
+│   │
+│   └── styles/                      # Global CSS (optional if using Tailwind)
+│       └── global.css
+│
+├── astro.config.mjs                 # Astro configuration (with Tailwind, etc.)
+├── tailwind.config.mjs              # Tailwind theme (dark cosmic style)
+├── package.json                     # Dependencies (astro, three, etc.)
+├── tsconfig.json                    # TypeScript config (if using TS)
+└── README.md
